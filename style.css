@@ -1,0 +1,317 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Padauk&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0 8%;
+}
+
+body header {
+  top: 0;
+  width: 84%;
+  position: fixed;
+  background-color: white;
+  height: 12vh;
+  border-bottom: 2px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  z-index: 1;
+}
+
+body header .brand-name {
+  color: black;
+  font-family: "Inter", sans-serif;
+}
+
+body header .brand-name:hover {
+  cursor: pointer;
+  color: #fb3e32;
+}
+
+body header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body header ul li {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body header ul li a {
+  font-family: "Padauk", sans-serif;
+  color: black;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 1rem;
+  text-decoration: none;
+}
+
+body header ul li a:hover {
+  color: #fb3e32;
+}
+
+body header .menu {
+  display: none;
+}
+
+@media screen and (max-width: 450px) {
+  body header ul {
+    display: none;
+  }
+  body header .menu {
+    display: block;
+  }
+}
+
+body .arrow {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 100%;
+  z-index: -1;
+}
+
+body .arrow .arrow_forward {
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: -6%;
+  font-size: 180px;
+  font-weight: 1000;
+  color: #fb3e32;
+}
+
+@media screen and (max-width: 900px) {
+  body .arrow .arrow_forward {
+    left: -10%;
+  }
+}
+
+body .arrow .span {
+  position: fixed;
+  margin: auto;
+  right: 0%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 35px;
+  height: 30px;
+  background: #fb3e32;
+}
+
+body main {
+  position: relative;
+  top: 12vh;
+  height: 88vh;
+  margin-bottom: 5rem;
+}
+
+body main .img {
+  z-index: -1;
+  position: absolute;
+  background: white;
+  opacity: 0.7;
+  top: 50%;
+  right: 0%;
+  width: 60%;
+  height: 70%;
+  background-image: url("pic.jpg");
+  -webkit-transform: scaleX(-1) translateY(-50%);
+          transform: scaleX(-1) translateY(-50%);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body main .content {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  top: 50%;
+  -webkit-transform: translateY(-25%);
+          transform: translateY(-25%);
+  height: 100%;
+}
+
+body main .content .text {
+  font-family: "Padauk", sans-serif;
+  width: 70%;
+  bottom: 0;
+  font-weight: 600;
+  font-size: 1.75em;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid black;
+}
+
+@media screen and (max-width: 900px) {
+  body main .content .text {
+    font-size: 1.25em;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  body main .content .text {
+    font-size: 1em;
+  }
+}
+
+body main .content .last-content {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+body main .content .last-content .contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: "Padauk", sans-serif;
+  font-size: 20px;
+}
+
+body main .content .last-content .contact p {
+  font-family: "Padauk", sans-serif;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-top: 2rem;
+  text-align: left;
+  font-size: 0.75em;
+  color: black;
+}
+
+body main .content .last-content .contact a {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 0.75em;
+  color: black;
+}
+
+body main .content .last-content .contact .tel {
+  text-decoration: none;
+}
+
+body main .content .last-content .contact .mail {
+  padding-bottom: 2rem;
+  list-style: upper-alpha;
+}
+
+body main .content span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+body main .content span .arrow-down {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  font-weight: Small;
+  font-size: 50px;
+  color: #c6c6c6;
+}
+
+@media screen and (max-width: 600px) {
+  body main .content {
+    top: unset;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  body main .content .text {
+    width: 100%;
+  }
+}
+
+section {
+  position: relative;
+  border-top: 2px solid black;
+  padding-top: 10vh;
+}
+
+section h2 {
+  padding: 2rem 0;
+  font-family: "Padauk", sans-serif;
+  font-size: 1.5rem;
+}
+
+section ul {
+  margin: 0 2rem;
+  list-style-type: "-      ";
+}
+
+section ul li {
+  font-family: "Padauk", sans-serif;
+  font-size: 1.25rem;
+}
+
+@media screen and (max-width: 900px) {
+  section h2 {
+    font-size: 1.25em;
+  }
+  section ul li {
+    font-size: 1em;
+  }
+}
+/*# sourceMappingURL=style.css.map */

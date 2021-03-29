@@ -1,0 +1,232 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Padauk&display=swap");
+body {
+  margin: 0 8%;
+
+  header {
+    top: 0;
+    width: 84%;
+    position: fixed;
+    background-color: rgb(255, 255, 255);
+    height: 12vh;
+    border-bottom: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+    .brand-name {
+      color: black;
+      font-family: "Inter", sans-serif;
+    }
+    .brand-name:hover {
+      cursor: pointer;
+      color: rgba(251, 62, 50, 1);
+    }
+    ul {
+      display: flex;
+      height: 100%;
+      align-items: center;
+      li {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        a {
+          font-family: "Padauk", sans-serif;
+          color: black;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          padding: 0 1rem;
+          text-decoration: none;
+        }
+        a:hover {
+          color: rgba(251, 62, 50, 1);
+        }
+      }
+    }
+    .menu {
+      display: none;
+    }
+    @media screen and (max-width: 450px) {
+      ul {
+        display: none;
+      }
+      .menu {
+        display: block;
+      }
+    }
+  }
+  .arrow {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    z-index: -1;
+    .arrow_forward {
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      left: -6%;
+      font-size: 180px;
+      font-weight: 1000;
+      color: rgba(251, 62, 50, 1);
+    }
+    @media screen and (max-width: 900px) {
+      .arrow_forward {
+        left: -10%;
+      }
+    }
+    .span {
+      position: fixed;
+      margin: auto;
+      right: 0%;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 35px;
+      height: 30px;
+      background: rgba(251, 62, 50, 1);
+    }
+  }
+  main {
+    position: relative;
+    top: 12vh;
+    height: 88vh;
+    margin-bottom: 5rem;
+    .img {
+      z-index: -1;
+      position: absolute;
+      background: white;
+      opacity: 0.7;
+      top: 50%;
+      right: 0%;
+      width: 60%;
+      height: 70%;
+      background-image: url("pic.jpg");
+      transform: scaleX(-1) translateY(-50%);
+      background-position: right;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .content {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      top: 50%;
+      transform: translateY(-25%);
+      height: 100%;
+      .text {
+        font-family: "Padauk", sans-serif;
+        width: 70%;
+        bottom: 0;
+        font-weight: 600;
+        font-size: 1.75em;
+        padding-bottom: 2rem;
+        border-bottom: 2px solid black;
+      }
+      @media screen and (max-width: 900px) {
+        .text {
+          font-size: 1.25em;
+        }
+      }
+      @media screen and (max-width: 320px) {
+        .text {
+          font-size: 1em;
+        }
+      }
+
+      .last-content {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        .contact {
+          display: flex;
+          flex-direction: column;
+          font-family: "Padauk", sans-serif;
+          font-size: 20px;
+          p {
+            font-family: "Padauk", sans-serif;
+            width: fit-content;
+            padding-top: 2rem;
+            text-align: left;
+            font-size: 0.75em;
+            color: black;
+          }
+          a {
+            width: fit-content;
+            font-size: 0.75em;
+            color: black;
+          }
+          .tel {
+            text-decoration: none;
+          }
+          .mail {
+            padding-bottom: 2rem;
+            list-style: upper-alpha;
+          }
+        }
+      }
+      span {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%);
+        transform: translateY(-50%);
+        align-content: center;
+        .arrow-down {
+          transform: rotate(90deg);
+          font-weight: Small;
+          font-size: 50px;
+          color: rgba(198, 198, 198, 1);
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 600px) {
+    main {
+      .content {
+        top: unset;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        transform: translateY(0);
+        .text {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+section {
+  position: relative;
+  border-top: 2px solid black;
+  padding-top: 10vh;
+
+  h2 {
+    padding: 2rem 0;
+    font-family: "Padauk", sans-serif;
+    font-size: 1.5rem;
+  }
+  ul {
+    margin: 0 2rem;
+    list-style-type: "-      ";
+    li {
+      font-family: "Padauk", sans-serif;
+      font-size: 1.25rem;
+    }
+  }
+  @media screen and (max-width: 900px) {
+    h2 {
+      font-size: 1.25em;
+    }
+    ul {
+      li {
+        font-size: 1em;
+      }
+    }
+  }
+}
